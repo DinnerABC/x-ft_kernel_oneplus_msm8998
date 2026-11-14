@@ -146,7 +146,7 @@ static QDF_STATUS lim_check_sta_in_pe_entries(tpAniSirGlobal mac_ctx,
 
 	*dup_entry = false;
 	for (i = 0; i < mac_ctx->lim.maxBssId; i++) {
-		if ((&mac_ctx->lim.gpSession[i] != NULL) &&
+		if ((mac_ctx->lim.gpSession != NULL) &&
 		    (mac_ctx->lim.gpSession[i].valid) &&
 		    (mac_ctx->lim.gpSession[i].pePersona == QDF_SAP_MODE)) {
 			session = &mac_ctx->lim.gpSession[i];
