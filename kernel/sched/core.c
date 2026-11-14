@@ -5129,7 +5129,7 @@ struct task_struct *idle_task(int cpu)
 }
 
 #ifdef CONFIG_SMP
-inline long
+extern long
 schedtune_cpu_margin_with(unsigned long util, int cpu, struct task_struct *p);
 
 /*

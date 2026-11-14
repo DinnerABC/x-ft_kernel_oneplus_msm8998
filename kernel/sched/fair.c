@@ -6937,7 +6937,7 @@ schedtune_margin(unsigned long signal, long boost, long capacity)
 	return margin;
 }
 
-inline long
+long
 schedtune_cpu_margin_with(unsigned long util, int cpu, struct task_struct *p)
 {
 	int boost = schedtune_cpu_boost_with(cpu, p);
@@ -6975,7 +6975,7 @@ schedtune_task_margin(struct task_struct *task)
 
 #else /* CONFIG_SCHED_TUNE */
 
-inline long
+long
 schedtune_cpu_margin_with(unsigned long util, int cpu, struct task_struct *p)
 {
 	return 0;
